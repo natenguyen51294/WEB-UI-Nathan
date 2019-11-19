@@ -160,16 +160,31 @@ header {
   margin: auto 4rem;
   padding: 2%;
 }
+@media (max-width: 1000px) {
+  header {
+    margin: 0;
+  }
+}
 @media (max-width: 500px) {
   header {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 header h1 {
   font-size: 6rem;
   width: 50%;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: #000000b5;
+}
+header h1 span {
+  font-size: 2rem;
+  font-family: 'Satisfy', cursive;
+  margin-left: 2rem;
+}
+@media (max-width: 500px) {
+  header h1 span {
+    font-size: 1.5rem;
+  }
 }
 @media (max-width: 1000px) {
   header h1 {
@@ -183,23 +198,22 @@ header h1 {
 }
 @media (max-width: 500px) {
   header h1 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1rem;
+    width: 70%;
+    text-align: left;
   }
 }
 header nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   width: 50%;
 }
 @media (max-width: 500px) {
   header nav {
-    width: 100%;
+    width: 30%;
   }
 }
 header nav a {
-  font-size: 2rem;
+  font-size: 1.6rem;
   text-decoration: none;
   color: #000000b5;
   text-transform: uppercase;
@@ -266,7 +280,6 @@ header nav a {
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.7;
   overflow: hidden;
 }
 .home {
@@ -276,14 +289,34 @@ header nav a {
   height: 100vh;
 }
 .home h2 {
-  margin-left: 10rem;
-  width: 40%;
-  text-align: center;
-  height: 50%;
+  width: 65%;
+  text-align: left;
+  height: 65%;
   line-height: 2;
-  font-size: 5rem;
+  font-size: 3.3rem;
   text-transform: capitalize;
   color: #000000b5;
+}
+@media (max-width: 1000px) {
+  .home h2 {
+    width: 80%;
+  }
+}
+.home h2 .span-1 {
+  font-size: 7rem;
+}
+@media (max-width: 800px) {
+  .home h2 .span-1 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 500px) {
+  .home h2 .span-1 {
+    font-size: 3.5rem;
+  }
+}
+.home h2 .span-2 {
+  font-size: 2rem;
 }
 @media (max-width: 1000px) {
   .home h2 {
@@ -293,136 +326,9 @@ header nav a {
 }
 @media (max-width: 500px) {
   .home h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     width: 100%;
     margin-left: 0;
-  }
-}
-.home .form {
-  width: 40%;
-  height: 85%;
-}
-@media (max-width: 1000px) {
-  .home .form {
-    height: 90%;
-  }
-}
-@media (max-width: 800px) {
-  .home .form {
-    height: 70%;
-  }
-}
-@media (max-width: 500px) {
-  .home .form {
-    display: none;
-  }
-}
-.home .form h4 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #000000b5;
-}
-@media (max-width: 1000px) {
-  .home .form h4 {
-    font-size: 1.5rem;
-  }
-}
-.home .form form {
-  width: 100%;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-}
-@media (max-width: 1000px) {
-  .home .form form {
-    box-shadow: none;
-  }
-}
-.home .form form .name {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 2%;
-}
-@media (max-width: 1000px) {
-  .home .form form .name {
-    justify-content: center;
-    align-items: center;
-  }
-}
-.home .form form .name label {
-  font-size: 2rem;
-  margin: 0.8rem 0;
-  color: #000000b5;
-}
-@media (max-width: 1000px) {
-  .home .form form .name label {
-    font-size: 1.3rem;
-  }
-}
-.home .form form .name input {
-  font-size: 1.5rem;
-  text-decoration: none;
-  outline: none;
-  color: #000000b5;
-}
-@media (max-width: 1000px) {
-  .home .form form .name input {
-    font-size: 1.3rem;
-  }
-}
-.home .form form .options {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 2%;
-  outline: none;
-}
-@media (max-width: 1000px) {
-  .home .form form .options {
-    justify-content: center;
-    align-items: center;
-  }
-}
-.home .form form .options label {
-  font-size: 2rem;
-  margin: 2rem 0;
-  color: #000000b5;
-}
-@media (max-width: 1000px) {
-  .home .form form .options label {
-    font-size: 1.3rem;
-  }
-}
-.home .form form .options input {
-  font-size: 1.5rem;
-  text-decoration: none;
-  outline: none;
-  color: #000000b5;
-}
-@media (max-width: 1000px) {
-  .home .form form .options input {
-    font-size: 1.3rem;
-  }
-}
-.home .form form .options textarea {
-  height: 7rem;
-  outline: none;
-  color: #000000b5;
-}
-@media (max-width: 1000px) {
-  .home .form form .options textarea {
-    font-size: 1.3rem;
-    height: 4rem;
-  }
-}
-.home .form form .options button {
-  font-size: 1.5rem;
-  margin: 2.5rem auto 5rem auto;
-  color: #000000b5;
-}
-@media (max-width: 1000px) {
-  .home .form form .options button {
-    font-size: 1.3rem;
-    margin: 1rem 1.5rem;
   }
 }
 .mission {
@@ -599,6 +505,7 @@ main .team-member .members p {
   text-align: center;
   text-transform: uppercase;
   color: #000000b5;
+  font-size: 2.8rem;
 }
 @media (max-width: 1000px) {
   .different-section h2 {
@@ -613,12 +520,29 @@ main .team-member .members p {
 }
 footer {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.3rem;
   margin-bottom: 3rem;
   color: #000000b5;
 }
+footer nav {
+  padding: 2%;
+  padding-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  color: #000000b5;
+  margin: 2rem;
+}
+footer span {
+  font-size: 1.2rem;
+}
 @media (max-width: 500px) {
   footer {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 }

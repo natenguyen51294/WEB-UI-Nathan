@@ -16,7 +16,7 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    opacity: .7;
+    // opacity: .7;
     overflow: hidden;
   }
 
@@ -28,14 +28,34 @@
 
 
   h2 {
-    margin-left: 10rem;
-    width: 40%;
-    text-align: center;
-    height: 50%;
+    width: 65%;
+    text-align: left;
+    height: 65%;
     line-height: 2;
-    font-size: 5rem;
+    font-size: 3.3rem;
     text-transform: capitalize;
     color: @text-color;
+
+    @media @desktop {
+      width: 80%;
+    }
+
+    .span-1 {
+      font-size: 7rem;
+
+      @media @tablet {
+        font-size: 5rem;
+      }
+
+      @media @phone {
+        font-size: 3.5rem;
+      }
+    }
+
+    .span-2 {
+      font-size: 2rem;
+    }
+
 
     @media @desktop {
       height: 50%;
@@ -43,137 +63,13 @@
     }
 
     @media @phone {
-      font-size: 2.2rem;
+      font-size: 2rem;
       width: 100%;
       margin-left: 0;
     }
   }
 
-  .form {
-    width: 40%;
-    height: 85%;
-
-    @media @desktop {
-      height: 90%;
-    }
-
-    @media @tablet {
-      height: 70%;
-    }
-
-    @media @phone {
-      display: none;
-    }
-
-    h4 {
-      text-align: center;
-      font-size: 2.5rem;
-      color: @text-color;
-
-      @media @desktop {
-        font-size: 1.5rem;
-      }
-    }
-
-    form {
-      width: 100%;
-      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-      
-      @media @desktop {
-        box-shadow: none;
-      }
-      
-
-      .name {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding: 2%;
-
-        @media @desktop {
-          justify-content: center;
-          align-items: center;
-        }
-      
-        label {
-          font-size: 2rem;
-          margin: .8rem 0;
-          color: @text-color;
-
-          @media @desktop {
-            font-size: 1.3rem;
-          }
-        }
-      
-        input {
-          font-size: 1.5rem;
-          text-decoration: none;
-          outline: none;
-          color: @text-color;
-
-          @media @desktop {
-            font-size: 1.3rem;
-          }
-        }
-      }
-
-      .options {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding: 2%;
-        outline: none;
-        
-        @media @desktop {
-          justify-content: center;
-          align-items: center;
-        }
-      
-        label {
-          font-size: 2rem;
-          margin: 2rem 0;
-          color: @text-color;
-
-          @media @desktop {
-            font-size: 1.3rem;
-          }
-        }
-      
-        input {
-          font-size: 1.5rem;
-          text-decoration: none;
-          outline: none;
-          color: @text-color;
-
-          @media @desktop {
-            font-size: 1.3rem;
-          }
-        }
-      
-        textarea {
-          height: 7rem;
-          outline: none;
-          color: @text-color;
-
-          @media @desktop {
-            font-size: 1.3rem;
-            height: 4rem;
-          }
-        }
-      
-        button {
-          font-size: 1.5rem;
-          margin: 2.5rem auto 5rem auto;
-          color: @text-color;
-
-          @media @desktop {
-            font-size: 1.3rem;
-            margin: 1rem 1.5rem;
-          }
-        }
-      }
-    }
-  }
+  
 }
 
 // About page 
