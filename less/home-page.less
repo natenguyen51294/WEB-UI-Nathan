@@ -35,7 +35,7 @@
     line-height: 2;
     font-size: 5rem;
     text-transform: capitalize;
-    color: @lighter-color;
+    color: @text-color;
 
     @media @desktop {
       height: 50%;
@@ -68,6 +68,7 @@
     h4 {
       text-align: center;
       font-size: 2.5rem;
+      color: @text-color;
 
       @media @desktop {
         font-size: 1.5rem;
@@ -97,6 +98,7 @@
         label {
           font-size: 2rem;
           margin: .8rem 0;
+          color: @text-color;
 
           @media @desktop {
             font-size: 1.3rem;
@@ -107,6 +109,7 @@
           font-size: 1.5rem;
           text-decoration: none;
           outline: none;
+          color: @text-color;
 
           @media @desktop {
             font-size: 1.3rem;
@@ -129,6 +132,7 @@
         label {
           font-size: 2rem;
           margin: 2rem 0;
+          color: @text-color;
 
           @media @desktop {
             font-size: 1.3rem;
@@ -139,6 +143,7 @@
           font-size: 1.5rem;
           text-decoration: none;
           outline: none;
+          color: @text-color;
 
           @media @desktop {
             font-size: 1.3rem;
@@ -148,6 +153,7 @@
         textarea {
           height: 7rem;
           outline: none;
+          color: @text-color;
 
           @media @desktop {
             font-size: 1.3rem;
@@ -158,6 +164,7 @@
         button {
           font-size: 1.5rem;
           margin: 2.5rem auto 5rem auto;
+          color: @text-color;
 
           @media @desktop {
             font-size: 1.3rem;
@@ -169,24 +176,110 @@
   }
 }
 
+// About page 
 
+.mission {
+  display: flex;
+  flex-direction: column;
+  background-color: @background;
+  margin: 5rem 4rem 2rem 4rem;
 
+  .intro {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
 
+    h1 {
+      width: 100%;
+      margin-bottom: 1.5rem;
+      color: @text-color;
+    }
+  }
 
+  .about {
+    width: 50%;
+    text-align: center;
 
+    h2 {
+      width: 100%;
+      margin-bottom: 1.5rem;
+      color: @text-color;
+    }
+  }
+}
+main {
+  margin: auto 4rem;
+  padding: 2%;
+  padding-top: 0;
+  
+  img {
+    margin-bottom: 2rem;
+    width: 20%;
+  }
+  
+  .leader {
+    .flex(center, center);
+    flex-direction: column;
+    background-color: @background;
 
+    h2 {
+      color: @text-color;
+      margin-top: 2rem;
+    }
 
+    .lead {
+      width: 50%;
+      margin: 2rem auto;
+      .flex(center,center);
+      flex-direction: column;
 
+      h4 {
+        font-size: 2rem;
+        color: @text-color;
+        margin-bottom: 1rem;
+      }
 
+      p {
+        text-align: center;
+      }
+    }
+  }
 
+  
 
+  .team-member {
+    .flex(space-evenly, center);
+    flex-wrap: wrap;
+    background-color: @background;
+    margin-top: 2rem;
 
+    .title {
+      text-align: center;
+      margin: 2rem auto;
+      width: 100%;
+      
+      h2 {
+        color: @text-color;
+      }
+    }
 
+    .members {
+      width: 45%;
+      margin: 2rem auto;
+      .flex(center,center);
+      flex-direction: column;
 
+      h4 {
+        font-size: 2rem;
+        color: @text-color;
+        margin-bottom: 1rem;
+      }
 
-
-
-
-
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
 
 

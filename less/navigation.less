@@ -11,7 +11,7 @@ header {
     font-size: 6rem;
     width: 50%;
     text-transform: uppercase;
-    color: @lighter-color;
+    color: @text-color;
 
     @media @desktop {
       font-size: 3rem;
@@ -42,7 +42,7 @@ header {
     a {
       font-size: 2rem;
       text-decoration: none;
-      color: @lighter-color;
+      color: @text-color;
       text-transform: uppercase;
 
       @media @desktop {
@@ -60,7 +60,33 @@ header {
   }
 }
 
+// About page
 
+.navigation {
+  .flex(space-around, center);
+  padding: 1%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: rgb(190, 190, 190);
 
+  h3 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: @text-color;
+    width: 40%;
+  }
+
+  nav {
+    .flex(space-evenly, center);
+    width: 60%;
+
+    a {
+      font-size: 1.6rem;
+      text-decoration: none;
+      color: @text-color;
+    }
+  }
+}
 
 

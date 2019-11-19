@@ -21,14 +21,13 @@
 }
 
 .style {
-  background-color: @lighter-color;
+  background-color: @dark-grey;
 
   .col-1-of-3 {
     width: 30%;
     .flex(center, center);
     flex-direction: column;
     padding: 3rem;
-    margin: 5rem 10rem;
 
     @media @desktop {
       width: 80%;
@@ -48,14 +47,13 @@
 }
 
 .color {
-  background-color: @primary-color;
+  background-color: @dark-grey;
 
   .col-1-of-2 {
     width: 40%;
     .flex(center, center);
     flex-direction: column;
     padding: 3rem;
-    margin: 5rem 10rem;
 
     @media @desktop {
       width: 80%;
@@ -74,17 +72,21 @@
 }
 
 
-h2 {
-  text-align: center;
-  text-transform: uppercase;
+.different-section {
 
-  @media @desktop {
-    font-size: 2.5rem;
-    margin: 0;
-  }
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: @text-color;
 
-  @media @phone {
-    font-size: 2rem;
+    @media @desktop {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    @media @phone {
+      font-size: 2rem;
+    }
   }
 }
 
