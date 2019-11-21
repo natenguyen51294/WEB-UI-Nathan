@@ -81,7 +81,30 @@ header {
   top: 0;
   background-color: @nav-about;
 
-  
+  .checkbox {
+    display: none;
+  }
+
+  .btn {
+    background-color: white;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+    z-index: 300;
+  }
+
+  .background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 4rem;
+    right: 4rem;
+    background-image: radial-gradient(@background, @background-about);
+    z-index: 200;
+  }
 
   h3 {
     font-size: 3rem;
@@ -115,10 +138,12 @@ header {
       .flex(center,center);
 
       &:hover {
-        box-shadow: 0 1px 2px rgba(0,0,0,0.3);
-        transition: box-shadow 0.5s ease-in-out;
-        transform: scale(1.3, 1.3);
-        border-radius: 50%;
+        transform: translateY(-.3rem);
+        transition: all .3s;
+      }
+
+      &:active {
+        transform: translateY(0);
       }
 
       @media @phone {

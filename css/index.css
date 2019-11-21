@@ -239,6 +239,28 @@ header button:active {
   top: 0;
   background-color: #ffdfaf;
 }
+.navigation .checkbox {
+  display: none;
+}
+.navigation .btn {
+  background-color: white;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  z-index: 300;
+}
+.navigation .background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 4rem;
+  right: 4rem;
+  background-image: radial-gradient(#ffe4e1, #ffebcd);
+  z-index: 200;
+}
 .navigation h3 {
   font-size: 3rem;
   text-transform: uppercase;
@@ -277,10 +299,11 @@ header button:active {
   align-items: center;
 }
 .navigation nav a:hover {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.5s ease-in-out;
-  transform: scale(1.3, 1.3);
-  border-radius: 50%;
+  transform: translateY(-0.3rem);
+  transition: all 0.3s;
+}
+.navigation nav a:active {
+  transform: translateY(0);
 }
 @media (max-width: 500px) {
   .navigation nav a {
@@ -719,6 +742,8 @@ header button:active {
   -o-animation: color-change 1s infinite;
   -ms-animation: color-change 1s infinite;
   animation: color-change 1s infinite;
+  transform: translateY(-0.3rem);
+  transition: 0.3s;
 }
 @-webkit-keyframes color-change {
   0% {
