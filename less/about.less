@@ -9,6 +9,50 @@
     text-align: center;
     margin: 1.5rem auto;
     font-family: 'Cookie', cursive;
+
+    &:hover {
+      -webkit-animation: color-change 1s infinite;
+      -moz-animation: color-change 1s infinite;
+      -o-animation: color-change 1s infinite;
+      -ms-animation: color-change 1s infinite;
+      animation: color-change 1s infinite;
+    }
+    @-webkit-keyframes color-change {
+      0% { color: purple; }
+      25% { color: rgb(255, 75, 75); }
+      50% { color: rgb(79, 79, 255); }
+      75% { color: green; }
+      100% { color: black; }
+    }
+    @-moz-keyframes color-change {
+      0% { color: purple; }
+      25% { color: rgb(255, 75, 75); }
+      50% { color: rgb(79, 79, 255); }
+      75% { color: green; }
+      100% { color: black; }
+    }
+    @-ms-keyframes color-change {
+      0% { color: purple; }
+      25% { color: rgb(255, 75, 75); }
+      50% { color: rgb(79, 79, 255); }
+      75% { color: green; }
+      100% { color: black; }
+    }
+    @-o-keyframes color-change {
+      0% { color: purple; }
+      25% { color: rgb(255, 75, 75); }
+      50% { color: rgb(79, 79, 255); }
+      75% { color: green; }
+      100% { color: black; }
+    }
+    @keyframes color-change {
+      0% { color: purple; }
+      25% { color: rgb(255, 75, 75); }
+      50% { color: rgb(79, 79, 255); }
+      75% { color: green; }
+      100% { color: black; }
+    }
+    
     
     @media @tablet {
       margin: auto 3rem;
@@ -35,7 +79,7 @@
   }
 
   #reverse {
-    @media @phone {
+    @media @tablet {
       flex-direction: row-reverse;
     }
   }
@@ -72,7 +116,7 @@
       }
 
       @media @desktop {
-        width: 45%;
+        width: 70%;
       }
 
       @media @tablet {
@@ -91,7 +135,7 @@
   }
 
   #reverse {
-    @media @phone {
+    @media @tablet {
       flex-direction: row;
     }
   }

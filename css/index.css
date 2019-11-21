@@ -662,6 +662,99 @@ header nav a {
   margin: 1.5rem auto;
   font-family: 'Cookie', cursive;
 }
+.style h3:hover,
+.color h3:hover {
+  -webkit-animation: color-change 1s infinite;
+  -moz-animation: color-change 1s infinite;
+  -o-animation: color-change 1s infinite;
+  -ms-animation: color-change 1s infinite;
+  animation: color-change 1s infinite;
+}
+@-webkit-keyframes color-change {
+  0% {
+    color: purple;
+  }
+  25% {
+    color: #ff4b4b;
+  }
+  50% {
+    color: #4f4fff;
+  }
+  75% {
+    color: green;
+  }
+  100% {
+    color: black;
+  }
+}
+@-moz-keyframes color-change {
+  0% {
+    color: purple;
+  }
+  25% {
+    color: #ff4b4b;
+  }
+  50% {
+    color: #4f4fff;
+  }
+  75% {
+    color: green;
+  }
+  100% {
+    color: black;
+  }
+}
+@-ms-keyframes color-change {
+  0% {
+    color: purple;
+  }
+  25% {
+    color: #ff4b4b;
+  }
+  50% {
+    color: #4f4fff;
+  }
+  75% {
+    color: green;
+  }
+  100% {
+    color: black;
+  }
+}
+@-o-keyframes color-change {
+  0% {
+    color: purple;
+  }
+  25% {
+    color: #ff4b4b;
+  }
+  50% {
+    color: #4f4fff;
+  }
+  75% {
+    color: green;
+  }
+  100% {
+    color: black;
+  }
+}
+@keyframes color-change {
+  0% {
+    color: purple;
+  }
+  25% {
+    color: #ff4b4b;
+  }
+  50% {
+    color: #4f4fff;
+  }
+  75% {
+    color: green;
+  }
+  100% {
+    color: black;
+  }
+}
 @media (max-width: 800px) {
   .style h3,
   .color h3 {
@@ -690,7 +783,7 @@ header nav a {
     flex-direction: column;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .style #reverse {
     flex-direction: row-reverse;
   }
@@ -731,7 +824,7 @@ header nav a {
 }
 @media (max-width: 1000px) {
   .style .col-1-of-3 img {
-    width: 45%;
+    width: 70%;
   }
 }
 @media (max-width: 800px) {
@@ -750,7 +843,7 @@ header nav a {
     flex-direction: column;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .color #reverse {
     flex-direction: row;
   }
@@ -801,6 +894,16 @@ header nav a {
   color: #000000b5;
   background-color: #ffe4e1;
 }
+@media (max-width: 1000px) {
+  .home-page {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 800px) {
+  .home-page {
+    font-size: 2rem;
+  }
+}
 @media (max-width: 500px) {
   .home-page {
     font-size: 1.8rem;
@@ -826,6 +929,16 @@ header nav a {
   transition: 0.3s ease-in;
   transform: scale(1.1, 1.1);
   border-radius: 5%;
+}
+@media (max-width: 1000px) {
+  .home-page nav a {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 800px) {
+  .home-page nav a {
+    font-size: 1.3rem;
+  }
 }
 @media (max-width: 500px) {
   .home-page nav a {
