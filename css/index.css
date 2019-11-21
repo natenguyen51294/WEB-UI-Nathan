@@ -368,6 +368,24 @@ header nav a {
   text-shadow: 0.5rem 0.5rem 1rem black;
   font-family: 'Raleway Dots', cursive;
   font-weight: 500;
+  -webkit-animation: action 1s infinite  alternate;
+  animation: action 1s infinite  alternate;
+}
+@-webkit-keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1rem);
+  }
+}
+@keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1rem);
+  }
 }
 @media (max-width: 1000px) {
   .different-section h2 {
@@ -707,6 +725,10 @@ header nav a {
   width: 60%;
   border-radius: 50%;
 }
+.style .col-1-of-3 img:hover {
+  transition: 0.5s ease-in-out;
+  transform: scale(1.1, 1.1);
+}
 @media (max-width: 1000px) {
   .style .col-1-of-3 img {
     width: 45%;
@@ -763,6 +785,10 @@ header nav a {
   width: 60%;
   border-radius: 50%;
 }
+.color .col-1-of-2 img:hover {
+  transition: 0.5s ease-in-out;
+  transform: scale(0.9, 0.9);
+}
 @media (max-width: 800px) {
   .color .col-1-of-2 img {
     width: 20%;
@@ -777,7 +803,7 @@ header nav a {
 }
 @media (max-width: 500px) {
   .home-page {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 .home-page nav {
@@ -794,9 +820,16 @@ header nav a {
   color: #000000b5;
   margin: 2rem;
 }
+.home-page nav a:hover {
+  color: #ffe4e1;
+  background-color: #000000b5;
+  transition: 0.3s ease-in;
+  transform: scale(1.1, 1.1);
+  border-radius: 5%;
+}
 @media (max-width: 500px) {
   .home-page nav a {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 .home-page span {

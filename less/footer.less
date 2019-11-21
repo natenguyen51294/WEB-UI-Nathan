@@ -6,7 +6,7 @@
   background-color: @background;
 
   @media @phone {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   nav {
@@ -20,9 +20,17 @@
       font-size: 1.6rem;
       color: @text-color;
       margin: 2rem;
+
+      &:hover {
+        color: @background;
+        background-color: @text-color;
+        transition: 0.3s ease-in;
+        transform: scale(1.1, 1.1);
+        border-radius: 5%;
+      }
       
       @media @phone {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
       }
     }
   }
