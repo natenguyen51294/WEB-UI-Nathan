@@ -67,6 +67,8 @@
   }
 }
 
+// Header for section
+
 .different-section {
 
   h2 {
@@ -97,6 +99,65 @@
 
     @media @phone {
       font-size: 2rem;
+    }
+  }
+}
+
+//Section Services
+
+.our-service {
+  width: 90%;
+  margin: 5rem auto;
+  .flex(space-between, flex-start);
+  flex-wrap: wrap;
+  background-color: @background;
+
+  .service {
+    width: 30%;
+    padding: 2%;
+    .flex(center,center);
+    flex-direction: column;
+
+    @media @tablet {
+      width: 50%;
+    }
+
+    @media @phone {
+      width: 100%;
+    }
+
+    i {
+      font-size: 6rem;
+      margin-bottom: 1rem;
+
+      @media @tablet {
+        font-size: 4.5rem;
+      }
+
+      @media @phone {
+        font-size: 3.5rem;
+      }
+    }
+
+    h6 {
+      font-size: 4rem;
+      font-family: 'Sastify', cursive;
+      margin-bottom: 2rem;
+      text-shadow: .1rem .1rem 5rem black;
+      text-transform: capitalize;
+      text-align: center;
+
+      @media @tablet {
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      text-align: center;
+
+      @media @phone {
+        font-size: 1.4rem;
+      }
     }
   }
 }
@@ -176,7 +237,7 @@
   img {
     margin-bottom: 2rem;
     width: 20%;
-    border-radius: 25%;
+    border-radius: 10%;
 
     &:hover {
       transition: 0.5s ease-out;
@@ -232,18 +293,15 @@
         }
 
         .git-link {
-          font-size: 1.6rem;
-          text-decoration: none;
-
-          
 
           &:link,
           &:visited {
-            color: blue;
+            color: black;
           }
 
           &:hover {
-            color: red;
+            color: purple;
+            transition: .3s;
           }
         }
       }
@@ -318,8 +376,6 @@
         }
 
         .git-link {
-          font-size: 1.6rem;
-          text-decoration: none;
           
           @media @tablet {
             font-size: 1.3rem;
@@ -327,11 +383,12 @@
 
           &:link,
           &:visited {
-            color: blue;
+            color: black;
           }
 
           &:hover {
-            color: red;
+            color: purple;
+            transition: .3s;
           }
         }
       }
