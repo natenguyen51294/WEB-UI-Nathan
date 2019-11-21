@@ -672,6 +672,11 @@ header nav a {
     flex-direction: column;
   }
 }
+@media (max-width: 500px) {
+  .style #reverse {
+    flex-direction: row-reverse;
+  }
+}
 .style .col-1-of-3 {
   width: 30%;
   display: flex;
@@ -721,6 +726,11 @@ header nav a {
 @media (max-width: 800px) {
   .color {
     flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .color #reverse {
+    flex-direction: row;
   }
 }
 .color .col-1-of-2 {
