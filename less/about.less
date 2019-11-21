@@ -1,7 +1,6 @@
 .style,
 .color {
   width: 90%;
-  margin: 0 auto;  
   .flex(space-between, center);
   margin: 5rem auto;
 
@@ -9,18 +8,58 @@
     text-align: center;
     margin: 1.5rem auto;
     font-family: 'Cookie', cursive;
-    
-    @media @tablet {
-      margin: auto 3rem;
-      font-size: 2.2rem;
+
+    &:hover {
+      -webkit-animation: color-change 1s infinite;
+      -moz-animation: color-change 1s infinite;
+      -o-animation: color-change 1s infinite;
+      -ms-animation: color-change 1s infinite;
+      animation: color-change 1s infinite;
     }
+    @-webkit-keyframes color-change {
+      0% { color: purple; }
+      25% { color: rgb(255, 75, 75); }
+      50% { color: rgb(79, 79, 255); }
+      75% { color: green; }
+      100% { color: black; }
+    }
+    @-moz-keyframes color-change {
+      0% { color: purple; }
+      25% { color: rgb(255, 75, 75); }
+      50% { color: rgb(79, 79, 255); }
+      75% { color: green; }
+      100% { color: black; }
+    }
+    @-ms-keyframes color-change {
+      0% { color: purple; }
+      25% { color: rgb(255, 75, 75); }
+      50% { color: rgb(79, 79, 255); }
+      75% { color: green; }
+      100% { color: black; }
+    }
+    @-o-keyframes color-change {
+      0% { color: purple; }
+      25% { color: rgb(255, 75, 75); }
+      50% { color: rgb(79, 79, 255); }
+      75% { color: green; }
+      100% { color: black; }
+    }
+    @keyframes color-change {
+      0% { color: purple; }
+      25% { color: rgb(255, 75, 75); }
+      50% { color: rgb(79, 79, 255); }
+      75% { color: green; }
+      100% { color: black; }
+    }
+  
   }
 
   p {
     font-size: 1.6rem;
+    text-align: center;
 
     @media @phone {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
   }
 
@@ -28,14 +67,13 @@
 
 .style {
   background-color: @background;
-  .flex(space-between,center);
-
-  @media @tablet {
+  
+  @media @desktop {
     flex-direction: column;
   }
 
   #reverse {
-    @media @phone {
+    @media @desktop {
       flex-direction: row-reverse;
     }
   }
@@ -47,31 +85,33 @@
     padding: 3rem;
 
     @media @desktop {
-      width: 30%;
       margin: 2rem 4rem;
-    }
-    
-    @media @tablet {
       width: 100%;
       flex-direction: row;
     }
-
+ 
     @media @phone {
       width: 100%;
       padding: 1rem;
-
     }
     
     img {
       width: 60%;
       border-radius: 50%;
 
-      @media @desktop {
-        width: 45%;
+      &:hover {
+        transition: 0.5s ease-in-out;
+        transform: scale(1.1, 1.1);
       }
 
-      @media @tablet {
+      @media @desktop {
         width: 20%;
+      }
+    }
+
+    h3 {
+      @media @desktop {
+        margin: auto 1.5rem;
       }
     }
   }
@@ -79,14 +119,13 @@
 
 .color {
   background-color: @background;
-  .flex(space-between,center);
 
   @media @tablet {
     flex-direction: column;
   }
 
   #reverse {
-    @media @phone {
+    @media @tablet {
       flex-direction: row;
     }
   }
@@ -112,9 +151,20 @@
       padding: 1rem;
     }
 
+    h3 {
+      @media @tablet {
+        margin: 1.5rem;
+      }
+    }
+
     img {
       width: 60%;
       border-radius: 50%;
+
+      &:hover {
+        transition: 0.5s ease-in-out;
+        transform: scale(.9, .9);
+      }
 
       @media @tablet {
         width: 20%;

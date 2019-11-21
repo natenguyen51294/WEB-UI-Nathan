@@ -5,8 +5,16 @@
   color: @text-color;
   background-color: @background;
 
-  @media @phone {
+  @media @desktop {
+    font-size: 2.2rem;
+  }
+
+  @media @tablet {
     font-size: 2rem;
+  }
+
+  @media @phone {
+    font-size: 1.8rem;
   }
 
   nav {
@@ -20,9 +28,30 @@
       font-size: 1.6rem;
       color: @text-color;
       margin: 2rem;
+      padding: 1rem;
+
+      &:hover {
+        color: @background;
+        background-color: @text-color;
+        transition: 0.3s ease-in;
+        transform: translateY(-.3rem);
+        border-radius: 10rem;
+      }
+
+      &:active {
+        transform: translateY(-.1rem);
+      }
+
+      @media @desktop {
+        font-size: 1.5rem;
+      }
+
+      @media @tablet {
+        font-size: 1.3rem;
+      }
       
       @media @phone {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
       }
     }
   }
@@ -68,6 +97,10 @@
 
     h5 {
       width: 60%;
+
+      @media @phone {
+        font-size: 1.2rem;
+      }
     }
 
     .social-media {
@@ -81,7 +114,7 @@
         text-transform: uppercase;
         text-decoration: none;
         font-weight: 700;
-
+        
         @media @tablet {
           font-size: 1.1rem;
         }
@@ -89,6 +122,11 @@
         &:link,
         &:visited {
           color: black;
+        }
+
+        &:hover {
+          color: blue;
+          transition: .3s;
         }
       }
 
@@ -103,18 +141,23 @@
 
       .fa-instagram:hover {
         color: #c32aa3;
+        transition: .3s;
       }
       .fa-facebook-f:hover {
         color: #3b5998;
+        transition: .3s;
       }
       .fa-google-plus-g:hover {
         color: #dc4e41;
+        transition: .3s;
       }
       .fa-twitter:hover {
         color: #55acee;
+        transition: .3s;
       }
       .fa-whatsapp:hover {
         color: #25d366;
+        transition: .3s;
       }
     }
   }
@@ -131,6 +174,10 @@
 
     h5 {
       margin-bottom: 2rem;
+
+      @media @phone {
+        font-size: 1.2rem;
+      }
     }
 
     h6 {
@@ -150,6 +197,10 @@
     h5 {
       font-size: 1.4rem;
       text-transform: capitalize;
+
+      @media @phone {
+        font-size: 1.2rem;
+      }
     }
   }
 }

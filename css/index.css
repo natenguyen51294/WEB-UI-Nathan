@@ -203,36 +203,31 @@ header h1 span {
     font-size: 1.5rem;
   }
 }
-header nav {
-  display: flex;
-  justify-content: center;
+header button {
   width: 8%;
-}
-header nav:hover {
-  box-shadow: 0.2rem 0.2rem 1rem;
-  border-radius: 45%;
-  transition: 0.5s;
-}
-@media (max-width: 500px) {
-  header nav {
-    width: 20%;
-  }
-}
-header nav a {
-  font-size: 1.6rem;
-  text-decoration: none;
-  color: #000000b5;
-  text-transform: capitalize;
+  border-radius: 10rem;
+  outline: none;
+  font-size: 1.5rem;
+  background-color: #ffe4e1;
 }
 @media (max-width: 800px) {
-  header nav a {
-    font-size: 1.2rem;
+  header button {
+    font-size: 1.1rem;
   }
 }
 @media (max-width: 500px) {
-  header nav a {
+  header button {
+    width: 15%;
     font-size: 1rem;
   }
+}
+header button:hover {
+  box-shadow: 0.2rem 0.2rem 0.5rem;
+  transform: translateY(-0.3rem);
+  transition: 0.3s;
+}
+header button:active {
+  transform: translateY(0);
 }
 .navigation {
   display: flex;
@@ -283,7 +278,7 @@ header nav a {
 }
 .navigation nav a:hover {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
   transform: scale(1.3, 1.3);
   border-radius: 50%;
 }
@@ -368,6 +363,24 @@ header nav a {
   text-shadow: 0.5rem 0.5rem 1rem black;
   font-family: 'Raleway Dots', cursive;
   font-weight: 500;
+  -webkit-animation: action 1s infinite  alternate;
+  animation: action 1s infinite  alternate;
+}
+@-webkit-keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1rem);
+  }
+}
+@keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1rem);
+  }
 }
 @media (max-width: 1000px) {
   .different-section h2 {
@@ -378,6 +391,68 @@ header nav a {
 @media (max-width: 500px) {
   .different-section h2 {
     font-size: 2rem;
+  }
+}
+.our-service {
+  width: 90%;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background-color: #ffe4e1;
+}
+.our-service .service {
+  width: 30%;
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 800px) {
+  .our-service .service {
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .our-service .service {
+    width: 100%;
+  }
+}
+.our-service .service i {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 800px) {
+  .our-service .service i {
+    font-size: 4.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .our-service .service i {
+    font-size: 3.5rem;
+  }
+}
+.our-service .service h6 {
+  font-size: 4rem;
+  font-family: 'Sastify', cursive;
+  margin-bottom: 2rem;
+  text-shadow: 0.1rem 0.1rem 5rem black;
+  text-transform: capitalize;
+  text-align: center;
+}
+@media (max-width: 800px) {
+  .our-service .service h6 {
+    font-size: 3rem;
+  }
+}
+.our-service .service p {
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .our-service .service p {
+    font-size: 1.4rem;
   }
 }
 .mission {
@@ -454,7 +529,7 @@ header nav a {
 .about-page img {
   margin-bottom: 2rem;
   width: 20%;
-  border-radius: 25%;
+  border-radius: 10%;
 }
 .about-page img:hover {
   transition: 0.5s ease-out;
@@ -514,16 +589,13 @@ header nav a {
     font-size: 2rem;
   }
 }
-.about-page .leader .lead .links .git-link {
-  font-size: 1.6rem;
-  text-decoration: none;
-}
 .about-page .leader .lead .links .git-link:link,
 .about-page .leader .lead .links .git-link:visited {
-  color: blue;
+  color: black;
 }
 .about-page .leader .lead .links .git-link:hover {
-  color: red;
+  color: purple;
+  transition: 0.3s;
 }
 .about-page .leader .lead p {
   text-align: center;
@@ -599,10 +671,6 @@ header nav a {
     font-size: 2rem;
   }
 }
-.about-page .team-member .members .links .git-link {
-  font-size: 1.6rem;
-  text-decoration: none;
-}
 @media (max-width: 800px) {
   .about-page .team-member .members .links .git-link {
     font-size: 1.3rem;
@@ -610,10 +678,11 @@ header nav a {
 }
 .about-page .team-member .members .links .git-link:link,
 .about-page .team-member .members .links .git-link:visited {
-  color: blue;
+  color: black;
 }
 .about-page .team-member .members .links .git-link:hover {
-  color: red;
+  color: purple;
+  transition: 0.3s;
 }
 .about-page .team-member .members p {
   text-align: center;
@@ -632,7 +701,6 @@ header nav a {
 .style,
 .color {
   width: 90%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -644,35 +712,119 @@ header nav a {
   margin: 1.5rem auto;
   font-family: 'Cookie', cursive;
 }
-@media (max-width: 800px) {
-  .style h3,
-  .color h3 {
-    margin: auto 3rem;
-    font-size: 2.2rem;
+.style h3:hover,
+.color h3:hover {
+  -webkit-animation: color-change 1s infinite;
+  -moz-animation: color-change 1s infinite;
+  -o-animation: color-change 1s infinite;
+  -ms-animation: color-change 1s infinite;
+  animation: color-change 1s infinite;
+}
+@-webkit-keyframes color-change {
+  0% {
+    color: purple;
+  }
+  25% {
+    color: #ff4b4b;
+  }
+  50% {
+    color: #4f4fff;
+  }
+  75% {
+    color: green;
+  }
+  100% {
+    color: black;
+  }
+}
+@-moz-keyframes color-change {
+  0% {
+    color: purple;
+  }
+  25% {
+    color: #ff4b4b;
+  }
+  50% {
+    color: #4f4fff;
+  }
+  75% {
+    color: green;
+  }
+  100% {
+    color: black;
+  }
+}
+@-ms-keyframes color-change {
+  0% {
+    color: purple;
+  }
+  25% {
+    color: #ff4b4b;
+  }
+  50% {
+    color: #4f4fff;
+  }
+  75% {
+    color: green;
+  }
+  100% {
+    color: black;
+  }
+}
+@-o-keyframes color-change {
+  0% {
+    color: purple;
+  }
+  25% {
+    color: #ff4b4b;
+  }
+  50% {
+    color: #4f4fff;
+  }
+  75% {
+    color: green;
+  }
+  100% {
+    color: black;
+  }
+}
+@keyframes color-change {
+  0% {
+    color: purple;
+  }
+  25% {
+    color: #ff4b4b;
+  }
+  50% {
+    color: #4f4fff;
+  }
+  75% {
+    color: green;
+  }
+  100% {
+    color: black;
   }
 }
 .style p,
 .color p {
   font-size: 1.6rem;
+  text-align: center;
 }
 @media (max-width: 500px) {
   .style p,
   .color p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 .style {
   background-color: #ffe4e1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .style {
     flex-direction: column;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
   .style #reverse {
     flex-direction: row-reverse;
   }
@@ -687,12 +839,7 @@ header nav a {
 }
 @media (max-width: 1000px) {
   .style .col-1-of-3 {
-    width: 30%;
     margin: 2rem 4rem;
-  }
-}
-@media (max-width: 800px) {
-  .style .col-1-of-3 {
     width: 100%;
     flex-direction: row;
   }
@@ -707,28 +854,29 @@ header nav a {
   width: 60%;
   border-radius: 50%;
 }
-@media (max-width: 1000px) {
-  .style .col-1-of-3 img {
-    width: 45%;
-  }
+.style .col-1-of-3 img:hover {
+  transition: 0.5s ease-in-out;
+  transform: scale(1.1, 1.1);
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .style .col-1-of-3 img {
     width: 20%;
   }
 }
+@media (max-width: 1000px) {
+  .style .col-1-of-3 h3 {
+    margin: auto 1.5rem;
+  }
+}
 .color {
   background-color: #ffe4e1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 @media (max-width: 800px) {
   .color {
     flex-direction: column;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .color #reverse {
     flex-direction: row;
   }
@@ -759,9 +907,18 @@ header nav a {
     padding: 1rem;
   }
 }
+@media (max-width: 800px) {
+  .color .col-1-of-2 h3 {
+    margin: 1.5rem;
+  }
+}
 .color .col-1-of-2 img {
   width: 60%;
   border-radius: 50%;
+}
+.color .col-1-of-2 img:hover {
+  transition: 0.5s ease-in-out;
+  transform: scale(0.9, 0.9);
 }
 @media (max-width: 800px) {
   .color .col-1-of-2 img {
@@ -775,9 +932,19 @@ header nav a {
   color: #000000b5;
   background-color: #ffe4e1;
 }
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
+  .home-page {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 800px) {
   .home-page {
     font-size: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .home-page {
+    font-size: 1.8rem;
   }
 }
 .home-page nav {
@@ -793,10 +960,31 @@ header nav a {
   font-size: 1.6rem;
   color: #000000b5;
   margin: 2rem;
+  padding: 1rem;
+}
+.home-page nav a:hover {
+  color: #ffe4e1;
+  background-color: #000000b5;
+  transition: 0.3s ease-in;
+  transform: translateY(-0.3rem);
+  border-radius: 10rem;
+}
+.home-page nav a:active {
+  transform: translateY(-0.1rem);
+}
+@media (max-width: 1000px) {
+  .home-page nav a {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 800px) {
+  .home-page nav a {
+    font-size: 1.3rem;
+  }
 }
 @media (max-width: 500px) {
   .home-page nav a {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 .home-page span {
@@ -841,6 +1029,11 @@ header nav a {
 .about-footer .connect h5 {
   width: 60%;
 }
+@media (max-width: 500px) {
+  .about-footer .connect h5 {
+    font-size: 1.2rem;
+  }
+}
 .about-footer .connect .social-media {
   width: 60%;
   display: flex;
@@ -864,6 +1057,10 @@ header nav a {
 .about-footer .connect .social-media .social-app:visited {
   color: black;
 }
+.about-footer .connect .social-media .social-app:hover {
+  color: blue;
+  transition: 0.3s;
+}
 .about-footer .connect .social-media i {
   font-size: 2rem;
   margin-right: 3rem;
@@ -875,18 +1072,23 @@ header nav a {
 }
 .about-footer .connect .social-media .fa-instagram:hover {
   color: #c32aa3;
+  transition: 0.3s;
 }
 .about-footer .connect .social-media .fa-facebook-f:hover {
   color: #3b5998;
+  transition: 0.3s;
 }
 .about-footer .connect .social-media .fa-google-plus-g:hover {
   color: #dc4e41;
+  transition: 0.3s;
 }
 .about-footer .connect .social-media .fa-twitter:hover {
   color: #55acee;
+  transition: 0.3s;
 }
 .about-footer .connect .social-media .fa-whatsapp:hover {
   color: #25d366;
+  transition: 0.3s;
 }
 .about-footer .contact {
   height: 25rem;
@@ -904,6 +1106,11 @@ header nav a {
 .about-footer .contact h5 {
   margin-bottom: 2rem;
 }
+@media (max-width: 500px) {
+  .about-footer .contact h5 {
+    font-size: 1.2rem;
+  }
+}
 .about-footer .contact h6 {
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -920,4 +1127,9 @@ header nav a {
 .about-footer .establish h5 {
   font-size: 1.4rem;
   text-transform: capitalize;
+}
+@media (max-width: 500px) {
+  .about-footer .establish h5 {
+    font-size: 1.2rem;
+  }
 }
