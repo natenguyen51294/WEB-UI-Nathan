@@ -605,20 +605,6 @@ header button:active {
   color: purple;
   transition: 0.3s;
 }
-.about-page .leader .lead p {
-  text-align: center;
-}
-@media (max-width: 1000px) {
-  .about-page .leader .lead p {
-    font-size: 1.4rem;
-  }
-}
-@media (max-width: 500px) {
-  .about-page .leader .lead p {
-    font-size: 1.3rem;
-    padding: 1%;
-  }
-}
 .about-page .team-member {
   display: flex;
   justify-content: space-evenly;
@@ -690,20 +676,6 @@ header button:active {
 .about-page .team-member .members .links .git-link:hover {
   color: purple;
   transition: 0.3s;
-}
-.about-page .team-member .members p {
-  text-align: center;
-}
-@media (max-width: 1000px) {
-  .about-page .team-member .members p {
-    font-size: 1.4rem;
-  }
-}
-@media (max-width: 500px) {
-  .about-page .team-member .members p {
-    font-size: 1.3rem;
-    padding: 1%;
-  }
 }
 .style,
 .color {
