@@ -49,6 +49,16 @@ header {
     outline: none;
     font-size: 1.5rem;
     background-color: @background;
+    cursor: pointer;
+
+    a {
+      text-decoration: none;
+
+      &:link,
+      &:visited {
+        color: @text-color;
+      }
+    }
 
     @media @tablet {
       font-size: 1.1rem;
@@ -80,31 +90,6 @@ header {
   width: 100%;
   top: 0;
   background-color: @nav-about;
-
-  .checkbox {
-    display: none;
-  }
-
-  .btn {
-    background-color: white;
-    height: 7rem;
-    width: 7rem;
-    position: fixed;
-    top: 3rem;
-    right: 3rem;
-    z-index: 300;
-  }
-
-  .background {
-    height: 6rem;
-    width: 6rem;
-    border-radius: 50%;
-    position: fixed;
-    top: 4rem;
-    right: 4rem;
-    background-image: radial-gradient(@background, @background-about);
-    z-index: 200;
-  }
 
   h3 {
     font-size: 3rem;

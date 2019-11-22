@@ -209,6 +209,14 @@ header button {
   outline: none;
   font-size: 1.5rem;
   background-color: #ffe4e1;
+  cursor: pointer;
+}
+header button a {
+  text-decoration: none;
+}
+header button a:link,
+header button a:visited {
+  color: #000000b5;
 }
 @media (max-width: 800px) {
   header button {
@@ -238,28 +246,6 @@ header button:active {
   width: 100%;
   top: 0;
   background-color: #ffdfaf;
-}
-.navigation .checkbox {
-  display: none;
-}
-.navigation .btn {
-  background-color: white;
-  height: 7rem;
-  width: 7rem;
-  position: fixed;
-  top: 3rem;
-  right: 3rem;
-  z-index: 300;
-}
-.navigation .background {
-  height: 6rem;
-  width: 6rem;
-  border-radius: 50%;
-  position: fixed;
-  top: 4rem;
-  right: 4rem;
-  background-image: radial-gradient(#ffe4e1, #ffebcd);
-  z-index: 200;
 }
 .navigation h3 {
   font-size: 3rem;
@@ -568,7 +554,6 @@ header button:active {
 .about-page .leader h2 {
   color: #000000b5;
   margin-top: 2rem;
-  text-shadow: 0.2rem 0.2rem 0.5rem #a08bff;
 }
 @media (max-width: 500px) {
   .about-page .leader h2 {
@@ -649,7 +634,6 @@ header button:active {
 }
 .about-page .team-member .title h2 {
   color: #000000b5;
-  text-shadow: 0.2rem 0.2rem 0.5rem #a08bff;
 }
 @media (max-width: 500px) {
   .about-page .team-member .title h2 {
